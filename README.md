@@ -4,12 +4,25 @@
 
 This project demonstrates a fundamental digital signal processing (DSP) technique by generating a clean audio signal, corrupting it with synthetic noise, and implementing a filter to remove the noise using the **Fast Fourier Transform (FFT)**.
 
-The entire process—from the original clean signal to the noisy version and the final filtered output—is visualized in real-time and played back as audio, providing clear, tangible results.
+The entire process—from the original clean signal to the noisy version and the final filtered output—is visualized and played back as audio, providing clear, tangible results.
 
-<br>
+---
 
-![Project Demo GIF](https://i.imgur.com/your-gif-url.gif)
+## Visual Demonstration
 
+The effectiveness of the noise cancellation filter is clearly demonstrated in both the frequency and time domains.
+
+### Frequency Domain Analysis (The Core Logic)
+The plot below shows the signal's spectrum at each stage. The middle plot clearly shows two large spikes representing the synthetic noise, which are completely removed in the bottom plot after filtering.
+
+![Frequency Analysis Plots]((https://github.com/Mo-Shams/Signal-processing/blob/main/Frequency%20domain%20plots.jpeg))
+
+### Time Domain Waveform
+This plot shows the signal's amplitude over time. While the effect of the noise is less obvious to the eye here, the middle plot shows a much more dense and erratic waveform compared to the cleaner, more structured original and filtered signals.
+
+![Time Domain Plots]((https://github.com/Mo-Shams/Signal-processing/blob/main/Time%20domain%20plots.jpeg))
+
+---
 
 ## Key Features
 
@@ -29,26 +42,5 @@ The entire process—from the original clean signal to the noisy version and the
     - **SciPy:** For implementing the Fast Fourier Transform (`fft`).
     - **Matplotlib:** For data visualization and plotting the signal waveforms.
     - **Sounddevice:** For real-time audio playback.
-
----
-
-## How It Works
-
-The noise cancellation logic is straightforward and effective:
-
-1.  **Generation:** A clean audio signal is created in the time domain.
-2.  **Corruption:** High-amplitude sinusoidal noise is added to the original signal.
-3.  **Transformation (FFT):** The noisy signal is converted to the frequency domain. In this domain, the constant musical notes are spread out, while the powerful noise signals appear as distinct, sharp spikes.
-4.  **Filtering:** The algorithm finds the two largest amplitude spikes in the frequency spectrum and sets their magnitude to zero.
-5.  **Reconstruction:** The original signal is recovered by subtracting the identified noise (as sine waves) from the noisy time-domain signal.
-
-### Outcome
-
-The filter successfully removes the synthetic noise, restoring the original audio with over **99% accuracy** (measured by correlation coefficient). This is visually confirmed by comparing the frequency spectrums of the noisy and filtered signals.
-
-| Noisy Signal (Frequency Domain) | Filtered Signal (Frequency Domain) |
-| :-----------------------------: | :--------------------------------: |
-| ![Noisy Spectrum](https://i.imgur.com/your-noisy-plot.png) | ![Filtered Spectrum](https://i.imgur.com/your-filtered-plot.png) |
-|   *Noise spikes are clearly visible* |     *Noise spikes are eliminated* |
 
 ---
