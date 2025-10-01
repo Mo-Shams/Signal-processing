@@ -52,22 +52,3 @@ The filter successfully removes the synthetic noise, restoring the original audi
 |   *Noise spikes are clearly visible* |     *Noise spikes are eliminated* |
 
 ---
-
-## Setup and Usage
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YourUsername/YourRepoName.git](https://github.com/YourUsername/YourRepoName.git)
-    cd YourRepoName
-    ```
-
-2.  **Install the required libraries:**
-    ```bash
-    pip install numpy scipy matplotlib sounddevice
-    ```
-
-3.  **Run the script:**
-    ```bash
-    python "Signal Processing.py"
-    ```
-    The script will generate the plots and play the original, noisy, and filtered audio clips sequentially.
