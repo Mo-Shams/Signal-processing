@@ -15,12 +15,12 @@ The effectiveness of the noise cancellation filter is clearly demonstrated in bo
 ### Frequency Domain Analysis (The Core Logic)
 The plot below shows the signal's spectrum at each stage. The middle plot clearly shows two large spikes representing the synthetic noise, which are completely removed in the bottom plot after filtering.
 
-![Frequency Analysis Plots](/Frequency domain plots.jpeg)
+![Frequency Analysis Plots](/frequency-domain-plots.jpeg)
 
 ### Time Domain Waveform
 This plot shows the signal's amplitude over time. While the effect of the noise is less obvious to the eye here, the middle plot shows a much more dense and erratic waveform compared to the cleaner, more structured original and filtered signals.
 
-![Time Domain Plots](/Time domain plots.jpeg)
+![Time Domain Plots](/time-domain-plots.jpeg)
 
 ---
 
